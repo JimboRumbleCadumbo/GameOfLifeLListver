@@ -1,0 +1,58 @@
+Bucket Sort Ideas:
+  Sorting game states/boards to then display the states where there were the most living things
+  Sorting clusters to display the largest connected clusters after the game is over
+
+Linear Search:
+  Iterating through each layer of the board to find living cells and make choices based on game of life rules
+
+
+
+Menu.h & .cpp:
+organize the menu and other functions to another file so that it looks cleaner.
+some menu options:
+  (1) enter a space (live <-> dead)
+  (2) 
+
+Maybe we have a Node Class
+and an extension of the Node Class called HeadNode representing the leftmost node in each row that the following nodes depend on 
+Node:
+  (1) bool isAlive
+  (2) the 8 pointers of directions
+
+
+Creating Board:
+  Initialize Node top left
+    M
+    ethod A:
+      Create a coresponding 2d vector with empty nodes that will essentially be a grouping step for the nodes
+      Then go through the vectors and essentially link it by testing for the bounds of the vector
+
+      vector<vector<Node*>> lattice(size, vector<Node*>(size, new Node*));
+    
+
+    Special Nodes List:
+      vector<Node*> corners -> contains all of the corners of the board
+      
+Classes:
+  Node:
+    Private:
+      bool alive;
+      bool inClust;
+      int xPos;
+      int yPos;
+      //Always size 8 vector always full of vectors where default they are all null
+      vector<Node*> neighbors;
+
+    public:
+      //xpos, ypos can never be empty so no default 
+      //node conditions for edge nodes depend on xpos and ypos
+      
+      Node(Node* topL , Node* top, Node* topR,  
+           Node* right, 
+           Node* bottomL, Node* bottom, Node* bottomR,
+           Node* left,
+           int xpos, int ypos) {
+           
+           }
+
+  Node Cluster:

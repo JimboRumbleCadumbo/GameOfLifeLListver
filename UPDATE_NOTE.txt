@@ -1,0 +1,22 @@
+[General Tools]
+1. For compile, use "Shell" on the right hand side. System is Ubuntu.
+2. Compile command: 
+  g++ -Wall main.cpp menu.cpp [**Other_related_file**] -o main
+  (*make sure you compile everytime you make changes*)
+3. Execute program:
+  ./main
+4. Useful commands:
+  ls: list all files
+  mkdir [name]: make new folder
+  rm [name]: remove file
+  cp [name] [destination]: make a copy
+  (these should be useful for now)
+5. If want to try out new ideas that might change the whole outline of a program, just make a copy and compile with the new copy. Just in case if anything goes wrong.
+
+---------------[Newest Changes]---------------
+[Nov 19]
+  Jim:
+    - Added menu.cpp & menu.h
+    - Should be able to print out simple menu.
+    - Thoughts: could make "Start Game" and "Game Rule" as a seperate file for easier debug and clearity. 
+--------------[Previous Changes]--------------
