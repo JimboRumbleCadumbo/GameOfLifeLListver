@@ -10,15 +10,26 @@ class Node {
     //TODO: Add clust obj representing the group of nodes that this node is part of
 
   public:
+    //getters
     bool getAlive() const;
+    int getXPos() const;
+    int getYPos() const;
     std::vector<Node*> getNeighbors();
 
+    //setters
+    void kill();
+    void revive();
+    void setPos(int x, int y);
+    void addNeighbor(Node* newN);
+
+    //Test functions
+    void printNeigborsTest();
+
     //Constructor
-    Node(bool alive = false, std::vector<Node*> neighbors = nullptr) {
+    Node(bool alive = false, std::vector<Node*> neighbors) {
       this->isAlive = alive;
-      //TODO: Requires overload assighnment to 
       this->neighbors = neighbors;
-      
     }
+}
 
 #endif
