@@ -22,6 +22,7 @@ Action retriveAction(int usrChoice) {
 }
 
 void Menu::printMainScreenIntro() {
+  cout << "\n";
   cout << "  *** Welcome to The Game of Life! ***" << endl;
   cout << "\n";
   cout << "  *** Please select an option ***" << endl;

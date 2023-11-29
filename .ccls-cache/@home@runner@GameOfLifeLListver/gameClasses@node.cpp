@@ -2,11 +2,11 @@
 #include "Node.h"
 using namespace std;
 
-
 //simple getters - const for later assighnment overload (dont know if it will be necessary)
-bool Node::getAlive() const {return *isAlive;}
+bool Node::isDead() const {return *isAlive;}
 int Node::getXPos() const {return *xPos;}
 int Node::getYPos() const {return *yPos;}
+int Node::getDaysAlive() const {return *daysAlive;}
 vector<Node*> Node::getNeighbors() const {return neighbors;}
 
 //Simple setters
@@ -35,5 +35,8 @@ void Node::printNeigborsTest(Node* parent) {
     itr++;
   }
 }
+
+//TODO: check conditions from game rules on time step
+void 
 
 }

@@ -1,19 +1,28 @@
+
+
+
 #include<vector>
+#include "GameBoard.h"
 #ifndef NODE_H
 #define NODE_H
 
-class Node {
+//inheriting from gameboard
+class Node : GameBoard {
   private:
     bool isAlive;
+    int* xPos;
+    int* yPos;
+    int* daysAlive();
     std::vector<Node*> neighbors;
 
     //TODO: Add clust obj representing the group of nodes that this node is part of
 
   public:
     //getters
-    bool getAlive() const;
+    bool isDead() const;
     int getXPos() const;
     int getYPos() const;
+    int getDaysAlive() const;
     std::vector<Node*> getNeighbors();
 
     //setters
@@ -30,6 +39,6 @@ class Node {
       this->isAlive = alive;
       this->neighbors = neighbors;
     }
-}
+};
 
 #endif

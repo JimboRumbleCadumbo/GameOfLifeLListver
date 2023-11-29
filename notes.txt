@@ -1,10 +1,41 @@
+Group proposal email, including: (PDF format)
+- Topics
+- UML diagram
+- how does the project meets requirement
+  ↳ algorithms
+  ↳ data / linkedlists
+  ↳ OOP
+- Stages of developent: "Planning"
+  ↳ including next steps
+
+//email content starts here//
+Topic: Game of Life in C++
+
+How proj meets requirement:
+1. Algorithms: 
+  - Every time step requires a linear search through each row in order to find living nodes and make changes
+  - we use bucket sort to sort clusters and display the largest node clusters at the end of the game
+2. data/LList: using a 8-directional linked list that will link nodes along their left, right, top, and bottom as well as the diagonals between each direction.
+3. Using 
+
+stages of development:
+1. Basic Node Class
+2. Basic GameBoard Class
+3. Basic "Process" class to simulate 1 time step using hardcoded rules and create testClass to test functionality
+4. Create Menu class that will take some user inputs and be able to play the most basic game of life
+5. Create GameOptions class and modify menu to allow users to change game options and modify Node, GB, Process to use GameOptions
+6. Implement Cluster class with bucket sort
+7. Implement color changes on board outputs for better visual clarity and more fun
+//end email content
+
+
 Bucket Sort Ideas:
   Sorting game states/boards to then display the states where there were the most living things
+  
   Sorting clusters to display the largest connected clusters after the game is over
 
 Linear Search:
   Iterating through each layer of the board to find living cells and make choices based on game of life rules
-
 
 
 Menu.h & .cpp:
@@ -22,8 +53,7 @@ Node:
 
 Creating Board:
   Initialize Node top left
-    M
-    ethod A:
+    Method A:
       Create a coresponding 2d vector with empty nodes that will essentially be a grouping step for the nodes
       Then go through the vectors and essentially link it by testing for the bounds of the vector
 
@@ -56,3 +86,19 @@ Classes:
            }
 
   Node Cluster:
+
+  Node Checking Protocol
+  For node in gameboard:
+    IF node.isDead() = TRUE
+      THEN IF node neighbors = gamerule_reproduction_threshold
+        THEN  node.kill()
+              gameboard->futureboard.at(node.y).at(node.x) = true
+    ELSE 
+      IF node neighbors < gamerule_min_neighbors OR node neighbors > gamerule_max_neighbors
+        THEN  node.kill()
+              gameboard->futureboard.at(node.y).at(node.x) = false
+              RETURN
+      IF node.timeAlive() > gameboard_mutation_threshold
+        THEN  cast node -> MutatedNode
+      
+      
