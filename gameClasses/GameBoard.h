@@ -50,7 +50,13 @@ class GameBoard {
     void startGame();                  // For main to access to play the game
     Node * getHead();
     Node * getTail();
+    void setWrapMode(bool);
+    void setPrintEachDay(bool);
+    void setMutationAmount(int);
+
+    GameBoard();
+    GameBoard(int size);
     
-}
+};
 
 #endif
