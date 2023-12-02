@@ -1,7 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include "gameClasses/GameBoard.h"
+#include "GameClasses/GameBoard.h"
 #include <iostream>
 #include <string>
 
@@ -10,6 +10,7 @@ private:
   GameBoard *usrGame;
   void printGameOptions();
   bool GameOver;
+
 public:
   Menu();
   void setGameOver(bool);
