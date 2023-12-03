@@ -1,15 +1,22 @@
-#include <iostream>
-#include <vector>
-#include <string>
+#include "GameClasses/GameBoard.h"
 #include "menu.h"
+#include <iostream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
 int main() {
-  Menu* newGame = new Menu();
-  newGame->printMainScreenIntro();
-  
-  cout << "  -- Program has ended --" << endl;
+
+  // ------------------------ Menu Initialization------------------------//
+
+  Menu *newGame = new Menu();
+  newGame->setGameOver(false);
+  while (!newGame->getGameOver()) {
+    newGame->printMainScreenIntro();
+  }
+
+  cout << "\n  -- Program has ended --" << endl;
 
   return 0;
 }

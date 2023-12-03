@@ -97,8 +97,13 @@ Classes:
       IF node neighbors < gamerule_min_neighbors OR node neighbors > gamerule_max_neighbors
         THEN  node.kill()
               gameboard->futureboard.at(node.y).at(node.x) = false
+
+              //When node dies 
+              gameboard->stichNode(new Node*, int x, int y)
+
               RETURN
       IF node.timeAlive() > gameboard_mutation_threshold
         THEN  cast node -> MutatedNode
-      
+
+When mutated node dies
       

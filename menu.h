@@ -10,12 +10,13 @@ private:
   GameBoard *usrGame;
   void printGameOptions();
   bool GameOver;
-
+  void cleanMenu();
 public:
   Menu();
   void setGameOver(bool);
   bool getGameOver();
   void printMainScreenIntro();
+  
 };
 
 #endif

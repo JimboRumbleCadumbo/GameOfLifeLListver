@@ -11,6 +11,12 @@ using namespace std;
 
 Menu::Menu() { usrGame = NULL; }
 
+void Menu::cleanMenu() {
+  int needed = 0;
+  if ((needed = system("clear")))
+    cout << needed << endl;
+}
+
 void Menu::setGameOver(bool usrChoice) { GameOver = usrChoice; }
 
 bool Menu::getGameOver() { return GameOver; }
@@ -37,12 +43,14 @@ void Menu::printGameOptions() {
   while (true) {
     // Get user input
     int usrChoice;
-    system("clear");
+    cleanMenu();
     cout << "---------------------[Game Settings]---------------------" << endl;
     cout << "  1) Change gameboard wrap."
-            "\n     Boundary nodes point to the other side if on."<< endl;
+            "\n     Boundary nodes point to the other side if on."
+         << endl;
     cout << "  2) Print everyday or only the last day specified."
-            "\n     On to print everyday."<< endl;
+            "\n     On to print everyday."
+         << endl;
     cout << "  3) Change mutation amount." << endl;
     cout << "  4) Go back to menu." << endl;
 
@@ -60,7 +68,7 @@ void Menu::printGameOptions() {
     } else if (usrChoice == 1) {
       int usrCase;
       while (true) {
-        system("clear");
+        cleanMenu();
         cout << "---------------------[Set Wrapping]---------------------"
              << endl;
         cout << "  1) Wrap within." << endl;
@@ -86,7 +94,7 @@ void Menu::printGameOptions() {
       int usrCase;
 
       while (true) {
-        system("clear");
+        cleanMenu();
         cout << "---------------------[Printing Method]---------------------"
              << endl;
         cout << "  1) Print Everyday." << endl;
@@ -110,7 +118,7 @@ void Menu::printGameOptions() {
       }
 
     } else if (usrChoice == 3) {
-      system("clear");
+      cleanMenu();
       cout << "---------------------[Mutation Number]---------------------"
            << endl;
       cout << "\nPlease enter the new Mutation Amount (1-10) or enter 0 "
@@ -139,11 +147,11 @@ void Menu::printMainScreenIntro() {
 
   int usrChoice;
   bool isValid = false;
-
+  cout << "\n";
   Action usrAction;
 
   while (true) { // Will keep running until EXIT.
-    system("clear");
+    cleanMenu();
     cout << "\n";
     cout << "  *** Welcome to The Game of Life! ***" << endl;
     cout << "\n";

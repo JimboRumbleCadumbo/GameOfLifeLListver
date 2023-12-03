@@ -1,3 +1,48 @@
 {
-  "files": {}
+  "files": {
+    "GameClasses/GameBoard.cpp": [
+      {
+        "id": "c19dadc6-24f2-40be-a5c0-edd24fe67ddf",
+        "line": 109,
+        "version": 681,
+        "index": 2875
+      }
+    ],
+    "GameClasses/Node.cpp": [
+      {
+        "id": "f94bc713-035e-4918-95dc-bae991786538",
+        "line": 1,
+        "version": 1166,
+        "index": 0
+      }
+    ],
+    "gameClasses/GameBoard.cpp": [
+      {
+        "id": "4de67f08-e369-4ebc-8248-1403dbf78956",
+        "line": 1,
+        "version": 3707,
+        "index": 0
+      },
+      {
+        "id": "74c80aa1-3c87-494e-8e44-7fbb16a872d0",
+        "line": 1,
+        "version": 3707,
+        "index": 0
+      },
+      {
+        "id": "00b4a4d2-0384-4efc-b383-ba97055dcc7a",
+        "line": 1,
+        "version": 3707,
+        "index": 0
+      }
+    ],
+    "main.cpp": [
+      {
+        "id": "f81560ce-be3f-448f-b246-07fca8d363a9",
+        "line": 13,
+        "version": 1991,
+        "index": 223
+      }
+    ]
+  }
 }
